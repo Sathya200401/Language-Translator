@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/deep_navy">
+
+    <!-- Top Bar -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LinguaX"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Language Selector Row -->
+    <LinearLayout
+        android:id="@+id/langSelectorRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader">
+        
+        <TextView
+            android:id="@+id/tvSourceLang"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="🇬🇧 English"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/btnSwap"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_popup_sync"
+            android:tint="@color/electric_blue" />
+
+        <TextView
+            android:id="@+id/tvTargetLang"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="🇮🇳 Telugu"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Input Card -->
+    <LinearLayout
+        android:id="@+id/inputCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/glass_card"
+        android:padding="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/langSelectorRow">
+
+        <EditText
+            android:id="@+id/etInput"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@null"
+            android:gravity="top|start"
+            android:hint="Type or speak text here..."
+            android:textColorHint="@color/text_secondary"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- Translate Button -->
+    <Button
+        android:id="@+id/btnTranslate"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:text="Translate ✦"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:background="@drawable/gradient_button"
+        app:backgroundTint="@null"
+        app:layout_constraintTop_toBottomOf="@id/inputCard" />
+
+    <!-- Output Card -->
+    <FrameLayout
+        android:id="@+id/outputCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/glass_card"
+        android:padding="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/btnTranslate">
+
+        <TextView
+            android:id="@+id/tvOutput"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="top|start"
+            android:text="Translation will appear here..."
+            android:textColor="@color/text_secondary"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/btnCopy"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="bottom|end"
+            android:src="@android:drawable/ic_menu_copy"
+            android:tint="@color/electric_blue" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

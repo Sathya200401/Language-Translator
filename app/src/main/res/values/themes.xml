@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.LinguaX" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/electric_blue</item>
+        <item name="colorPrimaryVariant">@color/deep_navy</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/soft_purple</item>
+        <item name="colorSecondaryVariant">@color/soft_purple</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:statusBarColor">@color/deep_navy</item>
+        <item name="android:windowBackground">@color/deep_navy</item>
+    </style>
+</resources>
