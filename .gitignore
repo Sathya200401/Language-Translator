@@ -1,0 +1,4 @@
+.repo.git/
+desktop.ini
+**/desktop.ini
+.git_broken_backup/
